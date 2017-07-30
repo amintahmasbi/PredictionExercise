@@ -1,5 +1,6 @@
 #include "classifier.h"
 #include <iostream>
+#include <sstream>
 #include <fstream>
 #include <math.h>
 #include <vector>
@@ -18,18 +19,21 @@ vector<vector<double> > Load_State(string file_name)
     	
     	istringstream iss(line);
     	vector<double> x_coord;
-    	double state1;
-	    double state2;
-	    double state3;
-	    double state4;
-	    iss >> state1;
-	    x_coord.push_back(state1);
-	    iss >> state2;
-	    x_coord.push_back(state2);
-    	iss >> state3;
-    	x_coord.push_back(state3);
-	    iss >> state4;
-	    x_coord.push_back(state4);
+    	string state1;
+	    string state2;
+	    string state3;
+	    string state4;
+	    getline(iss, state1, ',');
+	    x_coord.push_back(stod(state1));
+
+      getline(iss, state2, ',');
+	    x_coord.push_back(stod(state2));
+
+      getline(iss, state3, ',');
+    	x_coord.push_back(stod(state3));
+
+      getline(iss, state4, ',');
+	    x_coord.push_back(stod(state4));
     
 	    state_out.push_back(x_coord);
     }

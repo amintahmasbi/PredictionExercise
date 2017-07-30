@@ -41,6 +41,8 @@ classifier.h
 /home/hradt/Udacity/Term_3/PredictionExercise/src/classifier.h
 iostream
 -
+sstream
+-
 fstream
 -
 math.h
