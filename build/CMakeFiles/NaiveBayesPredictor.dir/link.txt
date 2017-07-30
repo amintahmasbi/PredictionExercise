@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/NaiveBayesPredictor.dir/classifier.cpp.o CMakeFiles/NaiveBayesPredictor.dir/main.cpp.o  -o NaiveBayesPredictor 
